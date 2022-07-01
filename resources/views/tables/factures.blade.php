@@ -48,9 +48,8 @@
                                                 <td>{{ $facture->montant_total }}</td>
                                                 <td>{{ $facture->forfait }}</td>
                                                 <td>{{ $facture->est_reglé }}</td>
-                                                <td><a href="#"class="btn btn-primary btn-sm">info</a> 
-                                                    <a href="#" class="btn btn-warning btn-sm">modifier</a> 
-                                                     <a href="#" class="btn btn-danger btn-sm">supp</a> </td>
+                                                <td>aucune operation</a> 
+                                                    
                                             </tr>
                                         @endforeach
 

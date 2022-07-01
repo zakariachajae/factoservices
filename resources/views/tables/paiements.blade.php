@@ -45,9 +45,8 @@
                                                 <td>{{ $paiement->facture }}</td>
                                                 <td>{{ $paiement->montant }}</td>
                                                 <td>{{ $paiement->date_paiement }}</td>
-                                                <td><a href="#"class="btn btn-primary btn-sm">info</a> 
-                                                    <a href="#" class="btn btn-warning btn-sm">modifier</a> 
-                                                     <a href="#" class="btn btn-danger btn-sm">supp</a> </td>
+                                                <td><a href="#"class="btn btn-primary btn-sm">aucune operation</a> 
+                                                    </td>
                                         @endforeach
 
                                     </tbody>

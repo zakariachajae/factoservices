@@ -8,7 +8,7 @@
         {{$error}} 
         <br>
     @endforeach
-    <form action="{{url('/tables/clients/edit/{id}')}}" method="POST">
+    <form action="{{url('/tables/clients/update',['client'=>$user->id])}}" method="POST">
         @csrf
         
         <div class="form-group">

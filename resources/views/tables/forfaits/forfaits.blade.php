@@ -17,6 +17,8 @@
                     </ul>
                     <div class="clearfix"></div>
                 </div>
+                
+                <div><a href={{url('/tables/forfaits/create')}} class="btn btn-warning btn-sm">créer un client</a></div>
                 <div class="x_content">
                     <div class="row">
                         <div class="col-sm-12">
@@ -43,8 +45,8 @@
                                                 <td>{{ $forfait->description }}</td>
                                                 <td>{{ $forfait->prix }}</td>
                                                 <td>{{ $forfait->created_at }}</td>
-                                                <td><a href="#"class="btn btn-primary btn-sm">info</a> 
-                                                    <a href="#" class="btn btn-warning btn-sm">modifier</a> 
+                                                <td><a href=" " class="btn btn-primary btn-sm">info</a> 
+                                                    <a href="{{url('/tables/forfaits/edit', $forfait->id)}}" class="btn btn-warning btn-sm">modifier</a> 
                                                      <a href="#" class="btn btn-danger btn-sm">supp</a> </td>
                                             </tr>
                                         @endforeach
