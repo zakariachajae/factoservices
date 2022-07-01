@@ -20,6 +20,10 @@ class DashboardController extends Controller
         $factures = Facture::all();
         $contrats = Contrat::all();
         $dernierClients = User::orderBy('created_at', 'DESC')->limit(5)->get();
+        $dernierFactures = Facture::orderBy('created_at', 'DESC')->limit(5)->get();
+        $dernierForfaits = Forfait::orderBy('created_at', 'DESC')->limit(5)->get();
+        $dernierPaiements = Paiement::orderBy('created_at', 'DESC')->limit(5)->get();
+        $dernierContrats = Contrat::orderBy('created_at', 'DESC')->limit(5)->get();
         return view(
             'dashboard',
             compact(
@@ -28,7 +32,11 @@ class DashboardController extends Controller
                 'paiements',
                 'forfaits',
                 'contrats',
-                'dernierClients'
+                'dernierClients',
+                'dernierFactures',
+                'dernierForfaits',
+                'dernierContrats',
+                'dernierPaiements',
             )
         );
     }

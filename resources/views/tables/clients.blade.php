@@ -31,6 +31,7 @@
                                             <th>password</th>
                                             <th>is_actif</th>
                                             <th>type_client</th>
+                                            <th>operations</th>
                                         </tr>
                                     </thead>
 
@@ -44,6 +45,7 @@
                                                 <td>{{ $client->password }}</td>
                                                 <td>{{ $client->is_actif }}</td>
                                                 <td>{{ $client->type_client }}</td>
+                                                <td><button type="button" class="btn btn-primary btn-sm"></button> | <button type="button" class="btn btn-warning btn-sm"></button> | <button type="button" class="btn btn-danger btn-sm"></button> </td>
                                             </tr>
                                         @endforeach
 

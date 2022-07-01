@@ -77,15 +77,15 @@
                     </thead>
                     <tbody>
                         @foreach ($dernierClients as $dernierClient)
-                        <tr>
-                           
-                            <td>{{ $dernierClient->id }}</td>
-                            <td>{{ $dernierClient->name }}</td>
-                            <td>{{ $dernierClient->email }}</td>
-                            <td>{{ $dernierClient->password }}</td>
-                        </tr>
+                            <tr>
+
+                                <td>{{ $dernierClient->id }}</td>
+                                <td>{{ $dernierClient->name }}</td>
+                                <td>{{ $dernierClient->email }}</td>
+                                <td>{{ $dernierClient->password }}</td>
+                            </tr>
                         @endforeach
-                    
+
                     </tbody>
                 </table>
 
@@ -111,31 +111,24 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
+                            <th>id</th>
+                            <th>nom_client</th>
+                            <th>date facturation</th>
+                            <th>date de creation</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        @foreach ($dernierFactures as $dernierFacture)
+                            <tr>
+
+                                <td>{{ $dernierFacture->id }}</td>
+                                <td>{{ $dernierFacture->nom_client }}</td>
+                                <td>{{ $dernierFacture->date_facturation }}</td>
+                                <td>{{ $dernierFacture->created_at }}</td>
+                            </tr>
+                        @endforeach
+
+
                     </tbody>
                 </table>
 
@@ -161,31 +154,23 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
+                            <th>id</th>
+                            <th>nom de forfait</th>
+                            <th>description</th>
+                            <th>prix</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        @foreach ($dernierForfaits as $dernierForfait)
+                            <tr>
+
+                                <td>{{ $dernierForfait->id }}</td>
+                                <td>{{ $dernierForfait->nom_client }}</td>
+                                <td>{{ $dernierForfait->date_facturation }}</td>
+                                <td>{{ $dernierForfait->created_at }}</td>
+                            </tr>
+                        @endforeach
+
                     </tbody>
                 </table>
 
@@ -211,31 +196,22 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
+                            <th>id</th>
+                            <th>nom client</th>
+                            <th>forfait</th>
+                            <th>date_creation</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        @foreach ($dernierContrats as $dernierContrat)
+                            <tr>
+
+                                <td>{{ $dernierContrat->id }}</td>
+                                <td>{{ $dernierContrat->nom_client }}</td>
+                                <td>{{ $dernierClient->forfait }}</td>
+                                <td>{{ $dernierClient->created_at }}</td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
@@ -261,31 +237,24 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
+                            <th>id</th>
+                            <th>client</th>
+                            <th>contrat</th>
+                            <th>facture</th>
+                            <th>date creation</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        @foreach ($dernierPaiements as $dernierPaiement)
+                            <tr>
+
+                                <td>{{ $dernierPaiement->id }}</td>
+                                <td>{{ $dernierPaiement->client }}</td>
+                                <td>{{ $dernierPaiement->contrat}}</td>
+                                <td>{{ $dernierPaiement->facture}}</td>
+                                <td>{{ $dernierPaiement->created_at }}</td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
@@ -295,6 +264,6 @@
 
     <br>
 
-    
-    
+
+
 </x-app-layout>
