@@ -10,7 +10,7 @@
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>gérer les clients: </h2>
+                    <h2>gérer les contrats: </h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 
@@ -26,26 +26,27 @@
                                     <thead>
                                         <tr>
                                             <th>id</th>
-                                            <th>Name</th>
-                                            <th>email</th>
-                                            <th>password</th>
-                                            <th>is_actif</th>
-                                            <th>type_client</th>
+                                            <th>Nom client</th>
+                                            <th>forfait</th>
+                                            <th>periodicite</th>
+                                            <th>montant total</th>
+                                            <th>date engagement</th>
                                             <th>operations</th>
                                         </tr>
                                     </thead>
 
 
                                     <tbody>
-                                        @foreach ($clients as $client)
+                                        @foreach ($contrats as $contrat)
                                             <tr>
-                                                <td>{{ $client->id }}</td>
-                                                <td>{{ $client->name }}</td>
-                                                <td>{{ $client->email }}</td>
-                                                <td>{{ $client->password }}</td>
-                                                <td>{{ $client->is_actif }}</td>
-                                                <td>{{ $client->type_client }}</td>
-                                                <td><button type="button" class="btn btn-primary btn-sm"></button> | <button type="button" class="btn btn-warning btn-sm"></button> | <button type="button" class="btn btn-danger btn-sm"></button> </td>
+                                                <td>{{ $contrat->id }}</td>
+                                                <td>{{ $contrat->nom_client }}</td>
+                                                <td>{{ $contrat->nom_forfait }}</td>
+                                                <td>{{ $contrat->periodicite }}</td>
+                                                <td>{{ $contrat->montant_TTC }}</td>
+                                                <td>{{ $contrat->date_eng }}</td>
+                                                <td><a href="#"class="btn btn-primary btn-sm">info</a> 
+                                                     <a href="{{ url('tables/contrats/delete', $contrat->id)}}" class="btn btn-danger btn-sm">supp</a> </td>
                                             </tr>
                                         @endforeach
 

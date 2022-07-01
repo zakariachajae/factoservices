@@ -10,7 +10,7 @@
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>gérer les clients: </h2>
+                    <h2>gérer les paiements: </h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 
@@ -26,27 +26,28 @@
                                     <thead>
                                         <tr>
                                             <th>id</th>
-                                            <th>Name</th>
-                                            <th>email</th>
-                                            <th>password</th>
-                                            <th>is_actif</th>
-                                            <th>type_client</th>
+                                            <th>client</th>
+                                            <th>contrat</th>
+                                            <th>facture</th>
+                                            <th>montant</th>
+                                            <th>date de paiement</th>
                                             <th>operations</th>
                                         </tr>
                                     </thead>
 
 
                                     <tbody>
-                                        @foreach ($clients as $client)
+                                        @foreach ($paiements as $paiement)
                                             <tr>
-                                                <td>{{ $client->id }}</td>
-                                                <td>{{ $client->name }}</td>
-                                                <td>{{ $client->email }}</td>
-                                                <td>{{ $client->password }}</td>
-                                                <td>{{ $client->is_actif }}</td>
-                                                <td>{{ $client->type_client }}</td>
-                                                <td><button type="button" class="btn btn-primary btn-sm"></button> | <button type="button" class="btn btn-warning btn-sm"></button> | <button type="button" class="btn btn-danger btn-sm"></button> </td>
-                                            </tr>
+                                                <td>{{ $paiement->id }}</td>
+                                                <td>{{ $paiement->client }}</td>
+                                                <td>{{ $paiement->contrat }}</td>
+                                                <td>{{ $paiement->facture }}</td>
+                                                <td>{{ $paiement->montant }}</td>
+                                                <td>{{ $paiement->date_paiement }}</td>
+                                                <td><a href="#"class="btn btn-primary btn-sm">info</a> 
+                                                    <a href="#" class="btn btn-warning btn-sm">modifier</a> 
+                                                     <a href="#" class="btn btn-danger btn-sm">supp</a> </td>
                                         @endforeach
 
                                     </tbody>

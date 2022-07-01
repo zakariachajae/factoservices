@@ -5,7 +5,9 @@
         </h2>
     </x-slot>
     <div class="clearfix"></div>
-
+    @if (Session::has('success'))
+        <p class="alert alert-success">{{Session::get('success')}}</p>
+    @endif
     <div class="row">
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel">
@@ -17,6 +19,7 @@
                     </ul>
                     <div class="clearfix"></div>
                 </div>
+                <div><a href={{url('/tables/clients/create')}} class="btn btn-warning btn-sm">créer un client</a></div>
                 <div class="x_content">
                     <div class="row">
                         <div class="col-sm-12">
@@ -45,7 +48,9 @@
                                                 <td>{{ $client->password }}</td>
                                                 <td>{{ $client->is_actif }}</td>
                                                 <td>{{ $client->type_client }}</td>
-                                                <td><button type="button" class="btn btn-primary btn-sm"></button> | <button type="button" class="btn btn-warning btn-sm"></button> | <button type="button" class="btn btn-danger btn-sm"></button> </td>
+                                                <td><a href="#"class="btn btn-primary btn-sm">info</a> 
+                                                     <a href="{{ url('tables/clients/edit', $client->id)}}" class="btn btn-warning btn-sm">modifier</a> 
+                                                      <a href="{{url('tables/clients/delete',$client->id)}}" class="btn btn-danger btn-sm">supp</a> </td>
                                             </tr>
                                         @endforeach
 

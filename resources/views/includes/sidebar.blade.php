@@ -4,15 +4,15 @@
                 <div class="menu_section">
                   <h3>General</h3>
                   <ul class="nav side-menu">
-                    <li><a><i class="fa fa-home"></i> Statistics </a>
+                    <li><a><i class="fa fa-home" href={{url('/dashboard');}}></i> Statistics </a>
                     </li>
                     <li><a><i class="fa fa-edit"></i> gérer les listes<span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href={{url('/tables/clients');}}>Clients</a></li>
-                        <li><a href="form_advanced.html">factures</a></li>
-                        <li><a href="form_validation.html">forfaits</a></li>
-                        <li><a href="form_wizards.html">contrats</a></li>
-                        <li><a href="form_upload.html">paiements</a></li>
+                        <li><a href={{url('/tables/clients/clients');}}>Clients</a></li>
+                        <li><a href={{url('/tables/contrats/contrats');}}>Contrats</a></li>
+                        <li><a href={{url('/tables/factures/factures');}}>factures</a></li>
+                        <li><a href={{url('/tables/forfaits/forfaits');}}>forfaits</a></li>
+                        <li><a href={{url('/tables/paiements/paiements');}}>paiements</a></li>
                       </ul>
                     </li>
 
