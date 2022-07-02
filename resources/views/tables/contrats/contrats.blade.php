@@ -5,7 +5,9 @@
         </h2>
     </x-slot>
     <div class="clearfix"></div>
-
+    @if (Session::has('success'))
+        <p class="alert alert-success">{{Session::get('success')}}</p>
+    @endif
     <div class="row">
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel">

@@ -16,11 +16,13 @@ class CreateFacturesTable extends Migration
         Schema::create('factures', function (Blueprint $table) {
             $table->id();
             $table->string('nom_client');
-            $table->datetime('date_facturation');
-            $table->datetime('date_paiement');
-            $table->double('montant_total');
-            $table->string('forfaits');
-            $table->boolean('est_reglé');
+            $table->date('date_facturation');
+            $table->date('date_paiement');
+            $table->integer('montant_total');
+            $table->string('forfait');
+            $table->boolean('est_validé')->default(false);
+            $table->boolean('est_reglé')->default(false);
+
             $table->timestamps();
         });
     }

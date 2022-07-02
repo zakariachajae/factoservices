@@ -17,8 +17,8 @@ class CreateContratsTable extends Migration
             $table->id();
             $table->string('nom_client');
             $table->string('forfait');
-            $table->string('periodicite');
-            $table->string('montant_TTC');
+            $table->integer('periodicite');
+            $table->integer('montant_TTC');
             $table->date('date_eng');
             $table->timestamps();
         });

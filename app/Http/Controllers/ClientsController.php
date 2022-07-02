@@ -97,7 +97,7 @@ class ClientsController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
 
-        return redirect('/tables/client')->with('success', 'Game Data is successfully deleted');
+        return redirect('/tables/clients/clients')->with('success', 'Game Data is successfully deleted');
     }
     //
 }

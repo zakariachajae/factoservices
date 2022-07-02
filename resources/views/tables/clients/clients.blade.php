@@ -50,7 +50,11 @@
                                                 <td>{{ $client->type_client }}</td>
                                                 <td><a href="#"class="btn btn-primary btn-sm">info</a> 
                                                      <a href="{{ url('tables/clients/edit', $client->id)}}" class="btn btn-warning btn-sm">modifier</a> 
-                                                      <a href="{{url('tables/clients/delete',$client->id)}}" class="btn btn-danger btn-sm">supp</a> </td>
+                                                     <form action="{{ url('tables/clients/destroy' , ['id'=>$client->id]   ) }}" method="POST">
+                                                        {{ csrf_field() }}
+                                                        {{ method_field('PATCH') }}
+                                                        <button type="submit" class="btn btn-danger btn-sm" style="margin-top: 10px;">supp</button>
+                                                      </form></td>
                                             </tr>
                                         @endforeach
 

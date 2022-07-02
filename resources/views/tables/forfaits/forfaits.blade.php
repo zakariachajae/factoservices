@@ -5,7 +5,9 @@
         </h2>
     </x-slot>
     <div class="clearfix"></div>
-
+    @if (Session::has('success'))
+        <p class="alert alert-success">{{Session::get('success')}}</p>
+    @endif
     <div class="row">
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel">
@@ -18,7 +20,7 @@
                     <div class="clearfix"></div>
                 </div>
                 
-                <div><a href={{url('/tables/forfaits/create')}} class="btn btn-warning btn-sm">créer un client</a></div>
+                <div><a href={{url('/tables/forfaits/create')}} class="btn btn-warning btn-sm">créer un forfait</a></div>
                 <div class="x_content">
                     <div class="row">
                         <div class="col-sm-12">
@@ -47,7 +49,11 @@
                                                 <td>{{ $forfait->created_at }}</td>
                                                 <td><a href=" " class="btn btn-primary btn-sm">info</a> 
                                                     <a href="{{url('/tables/forfaits/edit', $forfait->id)}}" class="btn btn-warning btn-sm">modifier</a> 
-                                                     <a href="#" class="btn btn-danger btn-sm">supp</a> </td>
+                                                    <form action="{{ url('tables/forfaits/destroy' , ['id'=>$forfait->id]   ) }}" method="POST">
+                                                        {{ csrf_field() }}
+                                                        {{ method_field('PATCH') }}
+                                                        <button type="submit" class="btn btn-danger btn-sm" style="margin-top: 10px;">supp</button>
+                                                      </form> </td>
                                             </tr>
                                         @endforeach
 

@@ -77,7 +77,15 @@ class ForfaitController extends Controller
 
         Forfait::whereId($id)->update($validatedData);
 
-        return redirect('/tables/forfaits/forfaits')->with('success', 'client is successfully updated');
+        return redirect('/tables/forfaits/forfaits')->with('success', 'forfait is successfully updated');
+    }
+
+    public function destroy($id)
+    {
+        $forfait = Forfait::findOrFail($id);
+        $forfait->delete();
+
+        return redirect('/tables/client/forfaits')->with('success', 'forfaitis successfully deleted');
     }
 }
     /**
@@ -90,13 +98,9 @@ class ForfaitController extends Controller
         $user = User::findOrFail($id);
         return view('tables.clients.destroy',compact('user'));
     }
-    public function destroy($id)
-    {
-        $user = User::findOrFail($id);
-        $user->delete();
+    */
 
-        return redirect('/tables/client')->with('success', 'Game Data is successfully deleted');
-    }
+   
     //
 
 
