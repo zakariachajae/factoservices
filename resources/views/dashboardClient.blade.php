@@ -5,6 +5,7 @@
         </h2>
     </x-slot>
     <!-- page content -->
+    <div class="clearfix">
     <div class="right_col" role="main">
         <div class="">
             <div class="row" style="display: inline-block;">
@@ -49,6 +50,8 @@
                 </div>
             </div>
         </div>
+        
+    
         <br>
         
         <div class="col-md-6 col-sm-6  ">

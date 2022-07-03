@@ -37,13 +37,13 @@
                   <ul class="nav side-menu">
                     <li><a  href={{url('/dashboardClient');}}><i class="fa fa-home"></i> dashboard client</a>
                     </li>
-                    <li><a  href={{url('/offreAbonnements/offreAbonnement');}}><i class="fa fa-briefcase"></i> offres d'abonnements </a>
+                    <li><a  href={{url('/offreAbonnement');}}><i class="fa fa-briefcase"></i> offres d'abonnements </a>
                     <li><a><i class="fa fa-edit"></i> voir mes données<span class="fa fa-chevron-down"></span></a>
                       <ul class="nav child_menu">
-                        <li><a href={{url('/tables/clients/clients');}}>mes abonnements</a></li>
-                        <li><a href={{url('/tables/contrats/contrats');}}>mes contrats</a></li>
-                        <li><a href={{url('/tables/factures/factures');}}>mes factures</a></li>
-                        <li><a href={{url('/tables/forfaits/forfaits');}}>mes paiements</a></li>
+                        <li><a href={{url('/mesAbonnement');}}>mes abonnements</a></li>
+                        
+                        <li><a href={{url('/mesFactures');}}>mes factures</a></li>
+                        <li><a href={{url('/mesPaiement');}}>mes paiements</a></li>
                       </ul>
                     </li>
 

@@ -1,8 +1,8 @@
 
         <!-- footer content -->
         <footer>
-            <div class="pull-right">
-              Factor Services - Developpé par CHAJAE ZAKARIA - @php echo date('Y'); @endphp
+            <div class="pull-center">
+             
             </div>
             <div class="clearfix"></div>
           </footer>
@@ -67,6 +67,8 @@
   
       <!-- Custom Theme Scripts -->
       <script src="{{asset('admin/js/custom.min.js')}}"></script>
+
+      <script src="html2pdf.bundle.min.js"></script>
       
     </body>
   </html>

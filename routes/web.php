@@ -22,6 +22,9 @@ use App\Http\Controllers\ForfaitController;
 use App\Http\Controllers\ValidationController;
 use App\Http\Controllers\DashboardClientController;
 use App\Http\Controllers\OffreAbonnementController;
+use App\Http\Controllers\PDFController;
+ 
+Route::get('/create-pdf-file/{id}', [PDFController::class, 'index'])->middleware(['auth']);
 
 
 Route::get('/', function () {
@@ -59,7 +62,13 @@ Route::get('/tables/paiements/paiements',[PaiementController::class,'index'])->m
 Route::get('/validation',[ValidationController::class,'index'])->middleware(['auth']);
 Route::patch('/validation/{id}/{v}', [ValidationController::class,'valider'])->middleware(['auth']);
 
-Route::get('/offreAbonnements/offreAbonnement',[OffreAbonnementController::class,'index'])->middleware(['auth']);
+Route::get('/offreAbonnement',[OffreAbonnementController::class,'index'])->middleware(['auth']);
+Route::get('/abonnement/{id}',[OffreAbonnementController::class,'create'])->middleware(['auth']);
+Route::post('/abonnement/{id}',[OffreAbonnementController::class,'abonner'])->middleware(['auth']);
+
+Route::get('/mesAbonnement',[OffreAbonnementController::class,'show'])->middleware(['auth']);
+Route::get('/mesFactures',[FactureController::class,'show'])->middleware(['auth']);
+Route::get('/mesPaiement',[PaiementController::class,'show'])->middleware(['auth']);
 
 
 

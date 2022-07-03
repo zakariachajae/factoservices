@@ -38,6 +38,15 @@
 
     <!-- Custom Theme Style -->
     <link href="{{ asset('admin/css/custom.min.css') }}" rel="stylesheet">
+
+    <script>
+        function generatePDF() {
+            // Choose the element that our invoice is rendered in.
+            const element = document.getElementById('invoice');
+            // Choose the element and save the PDF for our user.
+            html2pdf().from(element).save();
+        }
+    </script>
 </head>
 
 <body class="nav-md">
@@ -46,8 +55,15 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href={{url('/dashboard');}} class="site_title"><i class="fa fa-user"></i> <span>Facto
-                                Services</span></a>
+                        
+					@if(Auth::user()->is_admin==1)
+                        <a href={{url('/dashboard');}} class="site_title"><i class="fa fa-user"></i> <span>FACTURIMI 
+                                </span></a>
+                    @endif
+					@if(Auth::user()->is_admin==0)
+                        <a href={{url('/dashboardClient');}} class="site_title"><i class="fa fa-user"></i> <span>FACTURIMI 
+                                </span></a>
+                    @endif
                     </div>
 
                     <div class="clearfix"></div>
