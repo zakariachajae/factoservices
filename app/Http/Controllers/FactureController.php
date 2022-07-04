@@ -17,7 +17,7 @@ class FactureController extends Controller
 
     public function show(){
 
-        $factures= Facture::where(['nom_client'=> Auth::user()->name])->get();
+        $factures = Facture::where(['nom_client'=>Auth::user()->name, 'est_validé' => '1'])->get();
 
       
         

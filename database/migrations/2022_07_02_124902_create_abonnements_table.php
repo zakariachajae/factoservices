@@ -17,7 +17,7 @@ class CreateAbonnementsTable extends Migration
             $table->id();
             $table->string('nom_client');
             $table->string('nom_forfait');
-            $table->string('nom_contrat');
+            $table->integer('id_contrat');
             $table->timestamps();
         });
     }

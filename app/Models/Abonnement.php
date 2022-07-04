@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Abonnement extends Model
 {
     protected $fillable=[
+        
         'nom_client',
         'nom_forfait',
         'id_contrat',

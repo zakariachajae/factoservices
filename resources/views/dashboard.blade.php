@@ -69,7 +69,7 @@
                             <th>id</th>
                             <th>Name</th>
                             <th>email</th>
-                            <th>password</th>
+                            <th>type de client</th>
 
 
 
@@ -82,7 +82,7 @@
                                 <td>{{ $dernierClient->id }}</td>
                                 <td>{{ $dernierClient->name }}</td>
                                 <td>{{ $dernierClient->email }}</td>
-                                <td>{{ $dernierClient->password }}</td>
+                                <td>{{ $dernierClient->type_client }}</td>
                             </tr>
                         @endforeach
 
@@ -165,9 +165,9 @@
                             <tr>
 
                                 <td>{{ $dernierForfait->id }}</td>
-                                <td>{{ $dernierForfait->nom_client }}</td>
-                                <td>{{ $dernierForfait->date_facturation }}</td>
-                                <td>{{ $dernierForfait->created_at }}</td>
+                                <td>{{ $dernierForfait->nom_forfait }}</td>
+                                <td>{{ $dernierForfait->description }}</td>
+                                <td>{{ $dernierForfait->prix }}</td>
                             </tr>
                         @endforeach
 

@@ -85,7 +85,7 @@ class ForfaitController extends Controller
         $forfait = Forfait::findOrFail($id);
         $forfait->delete();
 
-        return redirect('/tables/client/forfaits')->with('success', 'forfaitis successfully deleted');
+       return redirect('/tables/forfaits/forfaits')->with('success', 'forfait is successfully deleted');
     }
 }
     /**

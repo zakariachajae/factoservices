@@ -119,7 +119,7 @@
                     @foreach ($abonnements as $abonnement)
                     <tr>
                       <td>{{$abonnement->nom_forfait}}</td>
-                      <td>{{$abonnement->nom_forfait}}</td>
+                      <td>{{$abonnement->id}}</td>
                       <td>{{$abonnement->created_at}}</td>
                       
                     </tr>
